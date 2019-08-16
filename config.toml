@@ -1,76 +1,7 @@
-[Eth]
-NetworkId = 1313500
-SyncMode = "fast"
-NoPruning = false
-LightPeers = 100
-DatabaseCache = 165
-TrieCleanCache = 82
-TrieDirtyCache = 82
-TrieTimeout = 3600000000000
-MinerGasFloor = 8000000
-MinerGasCeil = 8000000
-MinerGasPrice = 1000000000
-MinerRecommit = 3000000000
-MinerNoverify = false
-EnablePreimageRecording = false
-EWASMInterpreter = ""
-EVMInterpreter = ""
-
-[Eth.Ethash]
-CacheDir = "ethash"
-CachesInMem = 2
-CachesOnDisk = 3
-DatasetDir = "/root/.ethash"
-DatasetsInMem = 1
-DatasetsOnDisk = 2
-PowMode = 0
-
-[Eth.TxPool]
-Locals = []
-NoLocals = false
-Journal = "transactions.rlp"
-Rejournal = 3600000000000
-PriceLimit = 1
-PriceBump = 10
-AccountSlots = 16
-GlobalSlots = 4096
-AccountQueue = 64
-GlobalQueue = 1024
-Lifetime = 10800000000000
-
-[Eth.GPO]
-Blocks = 20
-Percentile = 60
-
-[Shh]
-MaxMessageSize = 1048576
-MinimumAcceptedPOW = 2e-01
-RestrictConnectionBetweenLightClients = true
-
-[Node]
-DataDir = "/root/.xerom"
-IPCPath = "geth.ipc"
-HTTPPort = 8545
-HTTPVirtualHosts = ["localhost"]
-HTTPModules = ["net", "web3", "eth", "shh"]
-WSPort = 8546
-WSModules = ["net", "web3", "eth", "shh"]
-
 [Node.P2P]
-MaxPeers = 100
+MaxPeers = 700
 NoDiscovery = false
 BootstrapNodes = ["enode://079763eff99b63261a1804ac5a28401d8d69137106e9022e588041a63c66594af910ffb28984eff4a009553246d5589d4075a61beb0c184a97d4bbdda793ec4a@157.230.144.98:30456","enode://b2267f97ffedb56626de2911442daf70fa9904f34b1106a17a93086898f5d6ce5ba9f88f38b34c7f154aa3e96ae6956dbfc002d1dbbaae288850b4dca1c92e74@178.238.229.61:30305","enode://cbfe746bcc1793286470393f9d83d045943e71b9f35f81af27e7cbf0d91e3340f915f3c47ee99b5f2c91438ffb0b7267d9bb48da19c04d3786a26fd78cd53953@173.212.202.40:50505","enode://514c56ab4f0735bb92de18b04e91c2e7994302555e0ce31ec01dbcb8463ecb8a2cd692a7cea7f47faa01f9915018fbaf759d62c3ac629e7ddc6f684d571a31e2@45.63.22.232:60606","enode://fa73c40a0eda74b67314165099c6bbafb3eb02747bd5cc0c928e10addb1a6277195e758a6c1752f74ed29ec69c3bf05a6a5388654dc9e17f314bc9c32cabdd3b@54.38.158.16:30307", "enode://7bbf02732b5dc875e3925aa68817059b81a1a9059d4b1132e9d379e9b4225cc18e30197ffc3ece8c38ed3d4ff113de0cda7e6628e501df087d85d218784999fc@54.38.158.16:30309"]
-StaticNodes = []
-TrustedNodes = []
-ListenAddr = ":30305"
+StaticNodes = ["enode://01fca75ab72730382a7bf4893a46dccfcac34206347bc829e837dcd0d862876dfe99ff354d98a87768c24c4d249863cf11d78ca436f0f898d10683c949e85fec@149.28.208.64:30305","enode://079763eff99b63261a1804ac5a28401d8d69137106e9022e588041a63c66594af910ffb28984eff4a009553246d5589d4075a61beb0c184a97d4bbdda793ec4a@157.230.144.98:30456","enode://b2267f97ffedb56626de2911442daf70fa9904f34b1106a17a93086898f5d6ce5ba9f88f38b34c7f154aa3e96ae6956dbfc002d1dbbaae288850b4dca1c92e74@178.238.229.61:30305","enode://cbfe746bcc1793286470393f9d83d045943e71b9f35f81af27e7cbf0d91e3340f915f3c47ee99b5f2c91438ffb0b7267d9bb48da19c04d3786a26fd78cd53953@173.212.202.40:50505","enode://514c56ab4f0735bb92de18b04e91c2e7994302555e0ce31ec01dbcb8463ecb8a2cd692a7cea7f47faa01f9915018fbaf759d62c3ac629e7ddc6f684d571a31e2@45.63.22.232:60606"]
+TrustedNodes = ["enode://01fca75ab72730382a7bf4893a46dccfcac34206347bc829e837dcd0d862876dfe99ff354d98a87768c24c4d249863cf11d78ca436f0f898d10683c949e85fec@149.28.208.64:30305","enode://079763eff99b63261a1804ac5a28401d8d69137106e9022e588041a63c66594af910ffb28984eff4a009553246d5589d4075a61beb0c184a97d4bbdda793ec4a@157.230.144.98:30456","enode://b2267f97ffedb56626de2911442daf70fa9904f34b1106a17a93086898f5d6ce5ba9f88f38b34c7f154aa3e96ae6956dbfc002d1dbbaae288850b4dca1c92e74@178.238.229.61:30305","enode://cbfe746bcc1793286470393f9d83d045943e71b9f35f81af27e7cbf0d91e3340f915f3c47ee99b5f2c91438ffb0b7267d9bb48da19c04d3786a26fd78cd53953@173.212.202.40:50505","enode://514c56ab4f0735bb92de18b04e91c2e7994302555e0ce31ec01dbcb8463ecb8a2cd692a7cea7f47faa01f9915018fbaf759d62c3ac629e7ddc6f684d571a31e2@45.63.22.232:60606"]
 EnableMsgEvents = false
-
-[Node.HTTPTimeouts]
-ReadTimeout = 30000000000
-WriteTimeout = 30000000000
-IdleTimeout = 120000000000
-
-[Dashboard]
-Host = "localhost"
-Port = 8080
-Refresh = 5000000000
